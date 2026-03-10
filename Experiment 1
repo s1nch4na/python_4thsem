@@ -1,0 +1,71 @@
+AIM : To study and implement different operators in Python and verify algebraic identities, bitwise relationships, and arithmetic operations like addition and subtraction.
+
+ALGORITHM:
+Start the program and assign a = 208 and b = 600.
+
+Display a heading and verify equation identities using Python expressions.
+
+Apply bitwise operators (AND, OR, XOR) and print the results.
+
+Verify addition and subtraction using bitwise operator relations.
+
+Display all results and end the program.
+
+CODE:
+a = 208
+b = 600
+
+print("In equation Assignment operators:\n")
+
+print((a+b)**2 == (a**2 + 2*a*b + b**2))
+print((a-b)**2 == (a**2 - 2*a*b + b**2))
+print((a+b)*(a+b) == 2*(a**2 - b**2))
+print((a+b)+(a-b) == 2*a)
+print((a**3 + b**3) == (a+b)*(a**2 - a*b + b**2))
+
+print("In Bitwise operators")
+
+print((a | b) == ((a ^ b) + (a & b)))
+print((a ^ (a & b)) == ((a | b) ^ b))
+print((b ^ (a & b)) == ((a | b) ^ a))
+print(((a & b) ^ (a | b)) == (a ^ b))
+
+print("In Addition\n")
+
+print((a + b) == ((a | b) + (a & b)))
+print((a + b) == ((a ^ b) + 2*(a & b)))
+
+print("In Subtraction\n")
+
+print((a - b) == ((a ^ (a & b)) - ((a | b) ^ a)))
+print((a - b) == (((a | b) ^ b) - (b ^ (a & b))))
+print((a - b) == ((a ^ (a & b)) - (b ^ (a & b))))
+print((a - b) == (((a | b) ^ b) - ((a | b) ^ a)))
+
+OUTPUT :
+
+In equation Assignment operators:
+
+True
+True
+False
+True
+True
+
+In Bitwise operators
+True
+True
+True
+True
+
+In Addition
+
+True
+True
+
+In Subtraction
+
+True
+True
+True
+True
