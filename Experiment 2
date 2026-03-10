@@ -1,0 +1,92 @@
+AIM: Write a program to implement control flow statements and looping statements in python.
+
+ALGORITHM:
+Start the program.
+
+Initialize player details for Sunil and Chettri such as runs, balls, fours, sixes, wickets, runs conceded, overs, and catches.
+
+Calculate strike rate using
+Strike Rate = (Runs / Balls) × 100
+and bowling economy using
+Economy Rate = Runs Conceded / Overs.
+
+Display the strike rate and bowling economy for both players.
+
+Use if–elif conditions to evaluate batting performance based on runs and strike rate.
+
+Use if–elif conditions to evaluate bowling performance based on wickets and economy rate.
+
+Use if–elif conditions to evaluate fielding performance based on number of catches.
+
+Determine the overall performance based on batting and bowling results.
+
+Display batting, bowling, fielding, and overall performance for both players.
+
+End the program.
+
+CODE:
+nam1 = 'sunil'
+runs = 148
+balls = 50
+fours = 6
+sixes = 16
+wick = 4
+runscon = 29
+overs = 2
+catch = 3
+
+sr = (runs / balls) * 100
+er = runscon / overs
+
+print("strike rate of sunil:", sr)
+print("bowling economy of sunil:", er)
+
+
+
+if runs >= 50 and sr >= 120:
+    batter = "excellent"
+elif runs >= 30 and sr >= 100:
+    batter = "good"
+elif runs >= 20:
+    batter = "average"
+else:
+    batter = "poor"
+print("batting performance of sunil:", batter )
+
+if wick >= 3 and er <= 6:
+    bowler = "excellent"
+elif wick >= 2 and er <= 8:
+    bowler = "good"
+elif wick >= 1:
+    bowler ="poor"
+print("bowling performance of sunil:", bowler)
+
+
+if catch >= 2:
+    fielder="outstanding fielder"
+
+elif catch == 1:
+    fielder="active fielder"
+
+else:
+    fielder="needs improvement"
+print("fielding performance of sunil", fielder )
+
+
+print("overall performance")
+if batter == "excellent" and bowler == "excellent":
+    overall="star all rounder"
+elif batter == "good" and bowler == "good":
+    overall="strong all rounder"
+else: 
+    overall = "needs improvement"
+print("overall performance", overall)
+
+OUTPUT:
+strike rate of sunil: 296.0
+bowling economy of sunil: 14.5
+batting performance of sunil: excellent
+bowling performance of sunil: poor
+fielding performance of sunil outstanding fielder
+overall performance
+overall performance needs improvement
