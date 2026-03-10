@@ -1,0 +1,52 @@
+AIM: write a program to demonstrate tuple related function in python.
+
+ALGORITHM:
+step1: start the program.
+step2: create a tuple with some elements.
+step3: diaplay all tuple elements using a function.
+step4: find and display the length of the tuple.
+step5: calculate and display the sum of elements.
+step6: find and display the maximum and minimum values.
+step7: run the code.
+step8: stop the program.
+
+CODE:
+print("tuple functions")
+
+numbers = (15, 25, 35, 45, 55)
+
+def length(t):
+    print("Length of tuple:", len(t))
+length(numbers)
+
+def display(t):
+    print("Tuple elements are:")
+    for i in t:
+        print(i)
+display(numbers)
+
+def tmax(t):
+    print("Maximum value:", max(t))
+tmax(numbers)
+
+def tmin(t):
+    print("Minimum value:", min(t))
+tmin(numbers)
+
+def tsum(t):
+    total = sum(t)
+    print("Sum of elements:", total)
+tsum(numbers)
+
+OUTPUT:
+tuple functions
+Length of tuple: 5
+Tuple elements are:
+15
+25
+35
+45
+55
+Maximum value: 55
+Minimum value: 15
+Sum of elements: 175
