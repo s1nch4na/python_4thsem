@@ -1,0 +1,67 @@
+AIM: Write a program to implement Various string operations.
+
+ALGORITHM:
+Start the program.
+
+Declare strings str = "hi welcome" and str2 = " to python" and another string hello = "im sinchana".
+
+Apply different string functions such as membership operators, split(), find(), replace(), upper(), lower(), len(), count(), capitalize(), title(), and strip().
+
+Concatenate the strings and find the index of a substring.
+
+Display all results and end the program.
+
+CODE:
+print("string functions")
+
+str = "hi welcome"
+
+print("i " in str)
+print("k" not in str)
+
+print(str.split())
+
+print(str.find("f"))
+
+print(str.replace("l", "L"))
+
+print(str.upper())
+
+print(str.lower())
+
+print(len(str))
+
+print(str.count("e"))
+
+print(str.capitalize())
+
+print(str.title())
+
+s = "  hello world  "
+print(s.strip())
+
+str2 = " to python"
+concat = str + str2
+print(concat)
+
+hello = "im sinchana"
+i = hello.index("im")
+print(i)
+
+
+OUTCOME:
+string functions
+True
+True
+['hi', 'welcome']
+-1
+hi weLcome
+HI WELCOME
+hi welcome
+10
+2
+Hi welcome
+Hi Welcome
+hello world
+hi welcome to python
+0
