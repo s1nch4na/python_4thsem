@@ -1,0 +1,84 @@
+AIM: write a program to demonstrate list and related functions in python.
+
+ALGORITHM:
+step1: start the program.
+step2: create a list with some elements.
+step3: perform list operations like slice , append , copy , extend, insert , remove , sort , loop , modifie , concate , tuple assigment.
+step4: run the code.
+step5: stop the program.
+
+CODE:
+print("list operations")
+
+# slicing
+list1=[11,12,13,14,15,16,17,18,19]
+e=list1[-8:-1:2]
+print(e)
+
+# append
+list1.append(20)
+print(list1)
+
+# copy
+subject_gen=["A","B","C"]
+x=subject_gen.copy()
+print(x)
+
+# extend
+no1=["101","202","303"]
+no2=["404","505","606"]
+no1.extend(no2)
+print(no1)
+
+# insert
+list1.insert(11,22)
+print(list1)
+
+# remove
+list1.remove(12)
+print(list1)
+
+# sort
+score=[45,72,18,90,120,66,39,54]
+score.sort()
+print("Asc order:",score)
+score.sort(reverse=True)
+print("Des order:",score)
+
+# loop
+countries=["JAPAN","GERMANY","BRAZIL"]
+for i in countries:
+    print(i)
+
+# modify
+list1[5]=77
+print(list1)
+
+# concatenate
+a=[7.5]
+b=[9.5]
+result=a+b
+print(result)
+
+# tuple assignment
+p,q=[6,9]
+print(p,q)
+print(p+q)
+
+OUTPUT:
+list operations
+[12, 14, 16, 18]
+[11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+['A', 'B', 'C']
+['101', '202', '303', '404', '505', '606']
+[11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22]
+[11, 13, 14, 15, 16, 17, 18, 19, 20, 22]
+Asc order: [18, 39, 45, 54, 66, 72, 90, 120]
+Des order: [120, 90, 72, 66, 54, 45, 39, 18]
+JAPAN
+GERMANY
+BRAZIL
+[11, 13, 14, 15, 16, 77, 18, 19, 20, 22]
+[7.5, 9.5]
+6 9
+15
