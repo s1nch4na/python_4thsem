@@ -1,0 +1,46 @@
+aim : a. write a program to implement numpy and pandas packages.
+      b. write a program to implement matplotlib and pandas libraries in python
+
+algorithm:
+step1: Start
+step2: Import pandas and matplotlib
+step3: Create a DataFrame with columns: NAME, USN, SPECIALIZATION, SUBJECT, MARKS
+step4: Print the DataFrame
+step5: Plot a bar chart using NAME (x-axis) and MARKS (y-axis)
+step6: Label x-axis as "NAME" and y-axis as "MARKS"
+step7: Give title "RESULTS"
+step8: Display the chart
+step9: End
+
+code:
+
+# PANDAS AND MATPLOTLIB
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.DataFrame ({
+    'NAME':['KRITI' , 'AKRITI' , 'DIKSHA' , 'THRISHA' , 'YASHVI'],
+    'USN':[ 512 , 234 , 234, 516, 501],
+    'SPECALIZATION':['mact' , 'ctis' , 'da' , 'gen a' , 'gen b'],
+    'SUBJECT': [ 'Python' , 'ct' , 'P&S' , 'ada' , 'ada' ],
+    'MARKS':[ 23 , 19 , 24 , 25 , 22]
+    })
+print(df)
+
+# PLOT CHART
+plt.bar(df["NAME"],df["MARKS"])
+plt.xlabel("NAME")
+plt.ylabel("MARKS")
+plt.title("RESULTS")
+
+output:
+
+      NAME  USN SPECALIZATION SUBJECT  MARKS
+0    KRITI  512          mact  Python     23
+1   AKRITI  234          ctis      ct     19
+2   DIKSHA  234            da     P&S     24
+3  THRISHA  516         gen a     ada     25
+4   YASHVI  501         gen b     ada     22
+Text(0.5, 1.0, 'RESULTS')
+
+output graph link: https://1drv.ms/i/c/1cf2a278a0d3a9d4/IQAa6mkuG7GITLSaqokoEXAdAY4xzZSIhZ3frypNwM-EezE?e=AZePTQ
