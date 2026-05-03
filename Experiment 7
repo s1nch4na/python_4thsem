@@ -1,0 +1,99 @@
+aim: demonstrate use of objects oriented programming concepts.
+
+algorithm:
+step1: Start
+step2: Define base class Vehicle with name and start()
+step3: Create derived classes (Car, Bike, Truck) overriding start()
+step4: Extend Car into ElectricCar with charge()
+step5: Create feature classes GPS and MusicSystem
+step6: Use multiple inheritance for SmartCar and HybridCar
+step7: Create objects of all classes
+step8: Call respective methods (start(), charge(), location(), play_music(), features())
+step9:End
+
+code:
+
+class Vehicle:
+    def __init__(self, name):
+        self.name = name
+
+    def start(self):
+        print("Vehicle starts")
+
+
+class Car(Vehicle):
+    def start(self):
+        print(self.name, "car starts with key")
+
+
+class ElectricCar(Car):
+    def charge(self):
+        print(self.name, "is charging")
+
+
+class GPS:
+    def location(self):
+        print("Tracking location")
+
+
+class MusicSystem:
+    def play_music(self):
+        print("Playing music")
+
+
+class SmartCar(GPS, MusicSystem):
+    def features(self):
+        print("Smart car has GPS and Music System")
+
+
+class Bike(Vehicle):
+    def start(self):
+        print(self.name, "bike starts with kick")
+
+
+class Truck(Vehicle):
+    def start(self):
+        print(self.name, "truck starts with button")
+
+
+class HybridCar(Car, GPS):
+    def features(self):
+        print(self.name, "has hybrid features")
+
+
+c = Car("Honda")
+e = ElectricCar("Tesla")
+b = Bike("Yamaha")
+t = Truck("Volvo")
+s = SmartCar()
+h = HybridCar("Toyota")
+
+c.start()
+
+e.start()
+e.charge()
+
+b.start()
+t.start()
+
+s.location()
+s.play_music()
+s.features()
+
+h.start()
+h.location()
+h.features()
+
+output:
+
+Honda car starts with key
+Tesla car starts with key
+Tesla is charging
+Yamaha bike starts with kick
+Volvo truck starts with button
+Tracking location
+Playing music
+Smart car has GPS and Music System
+Toyota car starts with key
+Tracking location
+Toyota has hybrid features
