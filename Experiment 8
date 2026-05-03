@@ -1,0 +1,47 @@
+aim: implement 're' module in python
+
+algorithm:
+step1: Start
+step2: Import re
+step3: Search 'b' in string → print result
+step4: Match pattern in device → print valid/not valid
+step5: plit text → print list
+step6: Find pattern "sweetu" → print match positions
+step7: End
+
+code:
+
+print("Regular expressions:")
+import re
+a = "bidri bidar"
+r= re.search('b',a)
+if r:
+ print("letter found")
+else:
+  print("not found")
+  
+device="bdr-585401"
+r=re.match("bdrk",device)
+if r:
+    print("its valid")
+else:
+    print("not valid")
+   
+txt="jain jnc"
+r=re.split(",",txt)
+print(r)
+
+meow="catu ratu matu sweetu"
+pattern="sweetu"
+matches=re.finditer(pattern, meow)
+for s in matches:
+    print("match",s.group(),"start position:", s.start(),"end position:",s.end())
+
+
+output:
+
+Regular expressions:
+letter found
+not valid
+['jain jnc']
+match sweetu start position: 15 end position: 21
