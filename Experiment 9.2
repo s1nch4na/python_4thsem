@@ -1,0 +1,73 @@
+exp 9.1
+
+algorithm:
+1. Start
+2. Import libraries
+    >Import NumPy as np
+    > Import Pandas as pd
+3. Create NumPy arrays
+     > Define array a = [1, 2, 3]
+     > Define array b = [4, 5, 6]
+4. Display arrays
+     > Print array a
+     > Print array b
+5. Perform operations
+     >  Compute addition: a + b
+     >  Compute multiplication: a * b
+6. Display results
+     >  Print result of addition
+     >   Print result of multiplication
+7. Create Pandas Series
+     >  Define a Series S = [100, 200, 300]
+8. Display Series
+    >   Print the Series S
+9. Create Pandas DataFrame
+    >  Create a DataFrame with:
+    >   column "Product": ["Pen", "Book", "Bag"]
+    >   Column "Price": [10, 50, 500]
+10. Display DataFrame
+    >  Print the DataFrame
+11. Stop
+
+
+code:
+
+import numpy as np
+import pandas as pd
+a=np.array([1,2,3])
+b=np.array([4,5,6])
+print("array A:", a)
+print("array B:", b)
+print(" Addition:", a+b)
+print(" multiplication:", a*b)
+
+S=pd.Series([100,200,300])
+print("\n pandas series")
+print(S)
+
+df=pd.DataFrame
+df=pd.DataFrame({
+    "Product": ["Pen", "Book" , "Bag"],
+    "Price": [10,50,500] })
+print("\n pandas DataFrame:")
+print(df)
+
+
+OUTPUT:
+
+array A: [1 2 3]
+array B: [4 5 6]
+ Addition: [5 7 9]
+ multiplication: [ 4 10 18]
+
+ pandas series
+0    100
+1    200
+2    300
+dtype: int64
+
+ pandas DataFrame:
+  Product  Price
+0     Pen     10
+1    Book     50
+2     Bag    500
